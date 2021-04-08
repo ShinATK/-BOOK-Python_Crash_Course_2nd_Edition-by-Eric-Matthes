@@ -124,6 +124,7 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
+        
         # 让最近绘制的屏幕可见
         pygame.display.flip()
 
