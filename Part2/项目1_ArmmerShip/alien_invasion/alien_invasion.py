@@ -37,6 +37,7 @@ class AlienInvasion:
             self.ship.upadate()
             self.bullets.update()
             self._update_bullets()
+            self._update_aliens()
             self._update_screen()
 
     def _check_events(self):
@@ -87,6 +88,10 @@ class AlienInvasion:
             if bullet.rect.bottom < 0:
                 self.bullets.remove(bullet)
 
+    def _update_aliens(self):
+        """更新外星人群中所有外星人的位置"""
+        self.aliens.update()
+
     def _creat_fleet(self):
         """创建外星人群"""
         alien = Alien(self)
@@ -124,7 +129,7 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
-        
+
         # 让最近绘制的屏幕可见
         pygame.display.flip()
 
