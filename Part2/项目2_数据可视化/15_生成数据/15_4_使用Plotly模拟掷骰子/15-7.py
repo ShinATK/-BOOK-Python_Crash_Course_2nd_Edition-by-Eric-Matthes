@@ -22,9 +22,10 @@ for value in range(2, max_result+1):
     frequencies.append(frequency)
 
 # 对结果进行可视化,dtick设置为1，是为了将x轴全部刻度都显示
-x_values = list(range(2, max_result+1))
+x_range = range(2, max_result+1)
+x_values = list(x_range)
 data = [Bar(x=x_values, y=frequencies)]
-x_axis_config = {'title':'结果', 'dtick':1}
-y_axis_config = {'title':'结果的频率'}
-my_layout = Layout(title='投掷一个D6和一个D10 50000次的结果', xaxis = x_axis_config, yaxis = y_axis_config)
-offline.plot({'data':data, 'layout':my_layout}, filename='3d6.html')
+x_axis_config = {'title': '结果', 'dtick': 1}
+y_axis_config = {'title': '结果的频率'}
+my_layout = Layout(title='投掷一个D6和一个D10 50000次的结果', xaxis=x_axis_config, yaxis=y_axis_config)
+offline.plot({'data': data, 'layout': my_layout}, filename='3d6.html')

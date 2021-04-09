@@ -4,6 +4,7 @@ from plotly.graph_objs import Bar, Layout
 from plotly import offline
 from random import randint
 
+
 class Die:
 
     def __init__(self, num_sides=6):
@@ -11,6 +12,7 @@ class Die:
 
     def roll(self):
         return randint(1, self.num_sides)
+
 
 if __name__ == '__main__':
 
@@ -28,7 +30,7 @@ if __name__ == '__main__':
 
     x_values = list(range(1, max_result+1))
     data = [Bar(x=x_values, y=frequencies)]
-    x_label_config = {'title':'result', 'dtick':1}
-    y_label_config = {'title':'frequency'}
+    x_label_config = {'title': 'result', 'dtick': 1}
+    y_label_config = {'title': 'frequency'}
     my_layout = Layout(title='同时投掷两个筛子的结果相乘', xaxis=x_label_config, yaxis=y_label_config)
-    offline.plot({'data':data, 'layout': my_layout}, filename='2D6_mutiply.html')
+    offline.plot({'data': data, 'layout': my_layout}, filename='2D6_mutiply.html')
