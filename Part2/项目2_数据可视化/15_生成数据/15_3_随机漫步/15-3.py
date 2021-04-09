@@ -4,7 +4,6 @@
 # 请使用5000个点而不是50 000个点。
 
 import matplotlib.pyplot as plt
-
 from random_walk import RandomWalk
 
 while True:
