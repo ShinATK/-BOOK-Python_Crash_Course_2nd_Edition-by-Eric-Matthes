@@ -1,0 +1,6 @@
+# 练习15-5：重构
+方法fill_walk()很长。请新建一个名为get_step()的方法，用于确定每次漫步的距离和方向，并计算每一步。
+然后，在fill_walk()中调用get_step()两次：
+    x_step = self.get_step()
+    y_step = self.get_step()
+通过这种重构，可以缩小方法fill_walk()，让它阅读和理解起来更容易。
