@@ -26,7 +26,7 @@ while True:
     x_axis_config = {'title':'结果', 'dtick':1}
     y_axis_config = {'title':'结果的频率'}
     my_layout = Layout(title=f'掷两个D8 {times}次的结果', xaxis=x_axis_config, yaxis=y_axis_config)
-    offline.plot({'data':data, 'layout':my_layout}, filename='2d8_plus.html')
+    offline.plot({'data':data, 'layout':my_layout}, filename='练习/练习15-6：两个D8/2d8_plus.html')
 
     keep_running = input('Another round?(y/n):')
     if keep_running == 'n':
